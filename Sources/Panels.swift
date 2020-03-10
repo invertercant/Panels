@@ -5,7 +5,7 @@
 
 import UIKit
 
-public class Panels {
+open class Panels {
     public weak var delegate: PanelNotifications?
     public var isExpanded: Bool {
         return (panelHeightConstraint?.constant ?? 0.0) > configuration.visibleArea()
@@ -62,7 +62,7 @@ public class Panels {
     }
 
     /// Close the panel
-    @objc public func collapsePanel() {
+    @objc open func collapsePanel() {
         guard isExpanded, let container = containerView else {
             return
         }
